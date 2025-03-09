@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>Assign#5</title>
+</head>
+<body>
+    <p id="original"></p>
+    <p id="usPosision"></p>
+    <p id="theCount"></p>
+    <p id="replaceDrasa"></p>
+
+    <script>
+        let gorge = `Two elite snipers receive identical missions: travel to a secret location and guard the west and east sides of a deep gorge for one year without any contact with the outside world or their counterparts on the opposite sides. Levi Kane, a former U.S. Marine Scout/Sniper and current private contractor agrees to guard the west tower. Drasa, a Lithuanian covert operative frequently employed by the Kremlin, guards the east side. Levi suffers from nightmares stemming from the guilt he has from killing enemies, while Drasa's father, Erikas, plans to suicide on Valentine's Day to reunite with his late wife.`;
+
+        document.getElementById("original").innerHTML = `<b>From text tor pai nee:</b> ${gorge}`;
+
+        let usIndex = gorge.indexOf("U.S");
+        document.getElementById("usPosision").innerHTML = `<b>Posision of "U.S":</b> ${usIndex}`;
+
+        let theMatches = gorge.match(/\bthe\b|\bThe\b/g);
+        let theCount = theMatches ? theMatches.length : 0;
+        document.getElementById("theCount").innerHTML = `<b>Count of "the" or "The":</b> ${theCount}`;
+
+        let rp = gorge.replace(/Drasa/g, "<u>actress</u>");
+        document.getElementById("replaceDrasa").innerHTML = `<b>Replace text:</b> ${rp}`;
+
+    </script>
+</body>
+</html>

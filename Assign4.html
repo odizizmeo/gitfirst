@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <p id = "number"></p>
+    <script>
+        let numbe = [];
+        for (let i=0;i<3;i++){
+            let number = parseFloat(prompt(`Enter ${i + 1}`));
+            numbe.push(number);   
+            numbe.sort();         
+        }
+        document.getElementById("number").innerHTML = numbe;   
+
+    </script>
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    
+</body>
+</html>
